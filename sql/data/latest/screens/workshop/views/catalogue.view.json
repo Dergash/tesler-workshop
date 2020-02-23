@@ -1,0 +1,12 @@
+{
+  "name" : "catalogue",
+  "title" : "Catalogue",
+  "template" : "DashboardView",
+  "url" : "/screen/workshop/view/catalogue",
+  "widgets" : [
+    {
+      "widgetName": "catalogueList",
+      "position": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd"
+                   logicalFilePath="db/migration/liquibase/initial/vanilla.xml">
+
+    <changeSet author="initial" id="Workshop tables">
+        <createTable remarks="Standard" tableName="STANDARD">
+            <column name="ID" remarks="Unique key" type="NUMBER(19, 0)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NAME" remarks="Standard name" type="VARCHAR2(100)"/>
+            <column defaultValueComputed="current_timestamp" name="CREATED_DATE" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="current_timestamp" name="UPDATED_DATE" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="1" name="CREATED_BY_USER_ID" type="NUMBER(19, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="1" name="LAST_UPD_BY_USER_ID" type="NUMBER(19, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="VSTAMP" type="NUMBER(19, 0)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="initial" id="Workshop data">
+        <loadData tableName="STANDARD" encoding="UTF-8" separator=";" quotchar="&quot;" file="db/migration/liquibase/data/initial/workshop/STANDARD.csv">
+            <column header="ID" name="ID" type="NUMERIC" />
+            <column header="CREATE_DATE" name="CREATE_DATE" type="TIMESTAMP" />
+            <column header="NAME" name="NAME" type="STRING" />
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
