@@ -1,0 +1,13 @@
+{
+  "name": "workshop",
+  "title": "Workshop",
+  "primaryViewName": "standardInfo",
+  "primaryViews": [
+    "standardInfo"
+  ],
+  "navigation": {
+    "menu": [
+      { "viewName": "standardInfo" }
+    ]
+  }
+}

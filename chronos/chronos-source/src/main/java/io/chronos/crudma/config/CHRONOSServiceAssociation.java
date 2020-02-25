@@ -1,5 +1,6 @@
 package io.chronos.crudma.config;
 
+import io.chronos.crudma.StandardService;
 import io.tesler.core.crudma.bc.BcIdentifier;
 import io.tesler.core.crudma.bc.EnumBcIdentifier;
 import io.tesler.core.crudma.bc.impl.AbstractEnumBcSupplier;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 public enum CHRONOSServiceAssociation implements EnumBcIdentifier {
 
 	// @formatter:off
+		bcStandard(StandardService.class)
 	;
 
 	// @formatter:on

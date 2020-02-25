@@ -1,0 +1,20 @@
+{
+  "name" : "standardList",
+  "title" : "Standards",
+  "type" : "List",
+  "bc" : "bcStandard",
+  "showCondition": [],
+  "fields" : [
+    {
+      "title" : "Name",
+      "key" : "name",
+      "type" : "input"
+    },
+    {
+      "title": "Created at",
+      "key": "createdAt",
+      "type": "dateTime"
+    }
+  ],
+  "options" : { }
+}

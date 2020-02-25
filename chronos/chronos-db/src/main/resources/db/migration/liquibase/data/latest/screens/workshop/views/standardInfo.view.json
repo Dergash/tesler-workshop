@@ -1,0 +1,12 @@
+{
+  "name" : "standardInfo",
+  "title" : "Standard Info",
+  "template" : "DashboardView",
+  "url" : "/screen/workshop/view/standardInfo",
+  "widgets" : [
+    {
+      "widgetName": "standardList",
+      "position": 1
+    }
+  ]
+}

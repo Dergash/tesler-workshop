@@ -8,5 +8,6 @@
     <include file="sequences.xml" relativeToChangelogFile="true"/>
     <include file="core.xml" relativeToChangelogFile="true"/>
     <include file="quartz.xml" relativeToChangelogFile="true"/>
+    <include file="workshop.xml" relativeToChangelogFile="true" />
 
 </databaseChangeLog>
