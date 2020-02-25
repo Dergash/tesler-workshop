@@ -12,10 +12,12 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 public class StandardDTO extends DataResponseDTO {
+
 	private String name;
 	private LocalDateTime createdAt;
 
 	public StandardDTO(Standard entity) {
+		this.setId(entity.getId().toString());
 		this.name = entity.getName();
 		this.createdAt = entity.getCreatedDate();
 	}
