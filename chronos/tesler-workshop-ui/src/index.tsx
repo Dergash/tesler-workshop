@@ -10,11 +10,14 @@ import './antd.less'
 import 'imports/rxjs'
 import {LocaleProvider} from 'antd'
 import enUs from 'antd/es/locale-provider/en_US'
+import langDictionary from 'assets/i18n'
 
 const App = <Provider
     customReducers={reducers}
     customEpics={epics}
     axiosInstance={axiosInstance}
+    lang="dk"
+    langDictionary={langDictionary}
     >
     <LocaleProvider locale={enUs}>
         <Layout/>

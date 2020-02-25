@@ -1,0 +1,15 @@
+{
+    "translation": {
+        "Reset settings": "Сбросить настройки",
+        "Display system settings": "Отображение системных ошибок",
+        "Show all errors": "Отображать все ошибки",
+        "Hide popup errors": "Скрывать всплывающие ошибки",
+        "Hide widget settings": "Скрывать ошибки на виджетах",
+        "Hide all errors": "Скрывать все ошибки",
+        "Previous comments": "Предыдущие комментарии",
+        "Next comments": "Следующие комментарии",
+        "Status was changed to": "Статус был изменен на «{{status}}»",
+        "Actions": "Действия",
+        "role": "роль"
+    }
+}
