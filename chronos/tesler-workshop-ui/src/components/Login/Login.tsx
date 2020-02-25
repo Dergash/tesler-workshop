@@ -12,7 +12,7 @@ export interface LoginProps {
 }
 
 export const Login: FunctionComponent<LoginProps> = (props) => {
-    const {t} = useTranslation();
+    const {t} = useTranslation()
     const [login, setLogin] = React.useState('vanilla')
     const [password, setPassword] = React.useState('vanilla')
 
