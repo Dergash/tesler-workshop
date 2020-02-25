@@ -1,0 +1,54 @@
+@import "~assets/styles/theme.less";
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+:global(.ant-btn).operation {
+    display: inline-flex;
+    align-items: flex-start;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    height: 40px;
+    border: solid 1px @greyish-brown;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.57;
+    color: @menu-text;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+:global(.ant-btn).formOperation {
+    border-color: transparent;
+    border-radius: 4px;
+    background: none;
+    color: @cerulean;
+    box-shadow: none;
+
+    &:hover {
+        border-color: transparent;
+        background: none;
+    }
+
+    &:focus,
+    &:active {
+        border-color: transparent;
+        background-color: @very-light-pink;
+    }
+}
+
+:global(.ant-btn:not([disabled])).formOperation:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+:global(.ant-btn:not(.ant-btn-icon-only):not(.ant-input-search-button):not(.ant-btn-circle)).operation {
+    min-width: 0px;
+}

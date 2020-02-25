@@ -1,0 +1,80 @@
+@import "~assets/styles/theme.less";
+
+.headerContainer {
+    background: white;
+    width: 100%;
+}
+
+.root {
+    color: @menu-text;
+}
+
+.customBgColor {
+    color: @primary-blue-gray;
+    background: white;
+}
+
+.fieldBlock {
+    flex-shrink: 0;
+    padding: 0 8px;
+}
+
+.field {
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.widgetTabs {
+    margin-top: -24px;
+}
+
+.titleArea {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.title {
+    min-width: 50%;
+    margin: 20px 20px 15px 0;
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: bold;
+
+    > button {
+        padding: 0;
+        margin-left: 8px;
+        min-width: 18px !important;
+        height: 18px;
+        width: 18px;
+        line-height: 18px;
+        border-radius: 50%;
+        opacity: 0.65;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+            border: 1px solid #000;
+        }
+
+        &.circleButtonActive {
+            background: #000;
+            color: #fff;
+            border: 1px solid #000;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.headerWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 0 0 #d5d5d5;
+    margin-bottom: 16px;
+}

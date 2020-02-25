@@ -1,0 +1,40 @@
+@import "~assets/styles/theme.less";
+
+.container {
+    width: 100%;
+    font-weight: 500;
+    overflow: hidden;
+
+    :global {
+        .ant-tabs-bar {
+            margin: 0;
+            border-bottom: none;
+        }
+
+        .ant-tabs-tab {
+            margin-right: 0 !important;
+
+            a {
+                display: block;
+                max-width: 272px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 14px;
+                color: #adadad;
+            }
+
+            &.ant-tabs-tab-active {
+                a {
+                    color: #575757;
+                }
+            }
+        }
+
+        .ant-tabs-top .ant-tabs-ink-bar {
+            bottom: 2px;
+            height: 2px;
+            background: #fb4;
+        }
+    }
+}
