@@ -1,0 +1,15 @@
+{
+  "name": "admin",
+  "title": "Администрирование",
+  "primaryViewName": "linkdictionaries",
+  "primaryViews": [
+    "linkdictionaries"
+  ],
+  "navigation": {
+    "menu": [
+      {
+        "viewName": "linkdictionaries"
+      }
+    ]
+  }
+}

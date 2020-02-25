@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.chronos</groupId>
+  <artifactId>chronos</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>CHRONOS</name>
+
+  <properties>
+    <checktyle.config>/chronos-base/src/main/resources/checkstyle-checker.xml</checktyle.config>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>IntegrationTests</id>
+      <modules>
+        <module>chronos-it</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>UI</id>
+      <modules>
+        <module>tesler-workshop-ui</module>
+      </modules>
+    </profile>
+  </profiles>
+
+  <modules>
+    <module>chronos-bom</module>
+    <module>chronos-base</module>
+    <module>chronos-model</module>
+    <module>chronos-source</module>
+    <module>chronos-tests</module>
+    <module>chronos-app</module>
+    <module>chronos-db</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+            <configLocation>${checktyle.config}</configLocation>
+            <encoding>UTF-8</encoding>
+            <consoleOutput>true</consoleOutput>
+            <failsOnError>true</failsOnError>
+            <linkXRef>false</linkXRef>
+            <sourceDirectories>
+              <directory>${project.build.sourceDirectory}</directory>
+              <directory>${project.build.testSourceDirectory}</directory>
+            </sourceDirectories>
+          </configuration>
+          <executions>
+            <execution>
+              <id>validate</id>
+              <phase>process-sources</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>8.8</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
