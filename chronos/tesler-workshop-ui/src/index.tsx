@@ -15,6 +15,7 @@ const App = <Provider
     customReducers={reducers}
     customEpics={epics}
     axiosInstance={axiosInstance}
+
     >
     <LocaleProvider locale={enUs}>
         <Layout/>

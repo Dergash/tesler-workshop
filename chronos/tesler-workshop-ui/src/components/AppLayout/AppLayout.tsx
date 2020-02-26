@@ -74,6 +74,7 @@ export function Layout(props: LayoutProps) {
                                 <div style={bodyWidth}>
                                     <View
                                         skipWidgetTypes={skipWidgetTypes}
+
                                         card={Card as any}
                                     />
                                 </div>

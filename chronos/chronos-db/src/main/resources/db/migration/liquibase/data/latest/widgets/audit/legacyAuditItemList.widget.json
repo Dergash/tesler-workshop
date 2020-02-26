@@ -1,0 +1,32 @@
+{
+  "name": "legacyAuditItemList",
+  "title": "LEGACY AUDITS",
+  "type": "List",
+  "bc": "legacyAuditItem",
+  "showCondition": [],
+  "fields": [
+    {
+      "title": "ID",
+      "key": "internalId",
+      "type": "input"
+    },
+    {
+      "title": "AUDIT NUMBER",
+      "key": "audit_no",
+      "type": "input"
+    },
+    {
+      "title": "AUDIT STATUS",
+      "key": "status",
+      "type": "input"
+    },
+    {
+      "title": "AUDIT TYPE",
+      "key": "audit_type",
+      "type": "input"
+    }
+
+  ],
+  "axisFields": [],
+  "chart": []
+}

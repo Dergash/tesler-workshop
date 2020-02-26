@@ -1,0 +1,14 @@
+{
+  "name": "legacyAudits",
+  "title": "Legacy Audits",
+  "template": "DashboardView",
+  "url": "/screen/legacy_audit/view/legacyAudits",
+  "widgets": [
+    {
+      "widgetName": "legacyAuditItemList",
+      "position": 1,
+      "gridWidth": 1,
+      "pageLimit": 3
+    }
+  ]
+}

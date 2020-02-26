@@ -1,0 +1,15 @@
+{
+  "name": "legacy_audit",
+  "title": "Legacy Audits",
+  "primaryViewName": "legacyAudits",
+  "primaryViews": [
+    "legacyAudits"
+  ],
+  "navigation": {
+    "menu": [
+      {
+        "viewName": "legacyAudits"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd"
+                   logicalFilePath="db/migration/liquibase/releases/release_2.xml">
+
+
+    <changeSet author="akinkaplanoglu" id="Workshop data">
+        <loadData tableName="AUDIT" encoding="UTF-8" separator=";" quotchar="&quot;" file="db/migration/liquibase/data/initial/audit_sample.csv">
+            <column header="ID" name="ID" type="NUMERIC" />
+            <column header="AUDIT_NO" name="AUDIT_NO" type="STRING" />
+            <column header="STATUS" name="STATUS" type="STRING" />
+            <column header="AUDIT_TYPE" name="AUDIT_TYPE" type="STRING" />
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

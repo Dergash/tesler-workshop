@@ -4,5 +4,7 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd"
                    logicalFilePath="db/migration/liquibase/master.xml">
     <include file="initial/initial.xml" relativeToChangelogFile="true"/>
+    <include file="releases/release_1.xml" relativeToChangelogFile="true"/>
+    <include file="releases/release_2.xml" relativeToChangelogFile="true"/>
     <include file="latest/latest.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
