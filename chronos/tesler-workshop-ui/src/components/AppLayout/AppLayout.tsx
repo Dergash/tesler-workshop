@@ -12,6 +12,8 @@ import {WidgetMeta, WidgetTypes} from '@tesler-ui/core/interfaces/widget'
 import Login from 'components/Login/Login'
 import {ApplicationError} from '@tesler-ui/core/interfaces/view'
 import Card from 'components/Card/Card'
+import {customWidgetTypes} from 'interfaces/widget'
+import ModalFormWidget from 'components/widgets/ModalWidget/ModalWidget'
 
 interface LayoutProps {
     screenName: string,
@@ -31,6 +33,10 @@ const skipWidgetTypes = [
     WidgetTypes.HeaderWidget,
     WidgetTypes.SecondLevelMenu,
 ]
+
+const customWidgets = {
+    [customWidgetTypes.ModalFormWidget]: ModalFormWidget
+}
 
 export function Layout(props: LayoutProps) {
     const isInfoPanelLayout = props.widgets.some(widget => widget.type !== WidgetTypes.List)
@@ -74,8 +80,8 @@ export function Layout(props: LayoutProps) {
                                 <div style={bodyWidth}>
                                     <View
                                         skipWidgetTypes={skipWidgetTypes}
-
                                         card={Card as any}
+                                        customWidgets={customWidgets}
                                     />
                                 </div>
                             </Col>

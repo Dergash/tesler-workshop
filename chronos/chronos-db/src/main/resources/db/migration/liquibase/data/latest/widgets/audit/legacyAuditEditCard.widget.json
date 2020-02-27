@@ -1,0 +1,61 @@
+{
+  "name": "legacyAuditEditCard",
+  "title": "Edit audit",
+  "type": "ModalFormWidget",
+  "bc": "legacyAuditItem",
+  "showCondition": [],
+  "fields": [
+    {
+      "label": "ID",
+      "key": "internalId",
+      "type": "input"
+    },
+    {
+      "label": "AUDIT NUMBER",
+      "key": "audit_no",
+      "type": "input"
+    },
+    {
+      "label": "AUDIT STATUS",
+      "key": "status",
+      "type": "input"
+    },
+    {
+      "label": "AUDIT TYPE",
+      "key": "audit_type",
+      "type": "input"
+    }
+  ],
+  "axisFields": [],
+  "chart": [],
+  "options": {
+    "layout": {
+      "rows": [
+        {
+          "cols": [
+            {
+              "fieldKey": "internalId",
+              "span": 12
+            },
+            {
+              "fieldKey": "audit_no",
+              "span": 12
+            }
+          ]
+        },
+        {
+          "cols": [
+            {
+              "fieldKey": "status",
+              "span": 12
+            },
+            {
+              "fieldKey": "audit_type",
+              "span": 12
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

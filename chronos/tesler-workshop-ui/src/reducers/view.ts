@@ -21,12 +21,18 @@ export const initialState: ViewState = {
 
 export default function screenReducer(
     state: ViewState = initialState,
-    action: AnyAction,
+    action: any,
     store: Readonly<AppState>
 ): ViewState {
     switch (action.type) {
         case coreActions.logoutDone:
             return initialState
+        case 'CANCEL_MODAL': {
+            return {
+                ...state,
+                selectedCell: null
+            }
+        }
         default:
             return state
     }

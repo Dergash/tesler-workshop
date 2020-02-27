@@ -2,12 +2,15 @@ package io.chronos.crudma.impl;
 
 import dto.AuditDto;
 import io.chronos.crudma.AuditService;
+import io.chronos.crudma.config.CHRONOSServiceAssociation;
 import io.chronos.crudma.meta.AuditServiceFieldMeta;
 import io.chronos.entity.Audit;
 import io.tesler.core.crudma.bc.BusinessComponent;
 import io.tesler.core.crudma.impl.VersionAwareResponseService;
+import io.tesler.core.dto.DrillDownType;
 import io.tesler.core.dto.rowmeta.ActionResultDTO;
 import io.tesler.core.dto.rowmeta.CreateResult;
+import io.tesler.core.dto.rowmeta.PostAction;
 import io.tesler.core.service.action.Actions;
 import io.tesler.core.service.rowmeta.FieldMetaBuilder;
 import io.tesler.model.core.entity.BaseEntity;
@@ -25,7 +28,11 @@ public class AuditServiceImpl extends VersionAwareResponseService<AuditDto, Audi
     @Override
     protected CreateResult<AuditDto> doCreateEntity(Audit audit, BusinessComponent businessComponent) {
        baseDAO.save(audit);
-       return new CreateResult<>(entityToDto(businessComponent,audit));
+       return new CreateResult<>(entityToDto(businessComponent,audit))
+               .setAction(PostAction.drillDown(
+                       DrillDownType.INNER,
+                       "/screen/legacy_audit/view/legacyAuditsCard/" + CHRONOSServiceAssociation.legacyAuditItem + "/" + audit.getId()
+               ));
     }
 
     @Override
@@ -39,10 +46,5 @@ public class AuditServiceImpl extends VersionAwareResponseService<AuditDto, Audi
     @Override
     public Actions<AuditDto> getActions() {
         return Actions.<AuditDto>builder().create().add().save().add().delete().add().build();
-    }
-
-    @Override
-    public boolean isDeferredCreationSupported(BusinessComponent bc) {
-        return false;
     }
 }

@@ -41,3 +41,7 @@ export function usePositionedWidgets(widgets: WidgetMeta[], skipWidgetTypes: str
         [widgets, skipWidgetTypes]
     )
 }
+
+export const enum customWidgetTypes {
+    ModalFormWidget = 'ModalFormWidget'
+}

@@ -9,6 +9,9 @@
     "menu": [
       {
         "viewName": "legacyAudits"
+      },
+      {
+        "viewName": "legacyAuditsCard"
       }
     ]
   }

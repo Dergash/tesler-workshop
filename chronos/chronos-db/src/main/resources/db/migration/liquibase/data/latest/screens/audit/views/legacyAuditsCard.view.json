@@ -1,0 +1,12 @@
+{
+  "name": "legacyAuditsCard",
+  "title": "Audit Card",
+  "template": "DashboardView",
+  "url": "/screen/legacy_audit/view/legacyAuditsCard",
+  "widgets": [
+    {
+      "widgetName": "legacyAuditItemCard",
+      "position": 1
+    }
+  ]
+}

@@ -9,6 +9,10 @@
       "position": 1,
       "gridWidth": 1,
       "pageLimit": 3
+    },
+    {
+      "widgetName": "legacyAuditEditCard",
+      "position": 2
     }
   ]
 }
